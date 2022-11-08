@@ -101,3 +101,10 @@ body {
     width: 92%;
     margin-top: var(--between-description-top);
 }
+
+.form-container {
+    background: var(--form-container-background);
+    height: var(--form-container-height);
+    margin-top: var(--between-description-form-container);
+    box-shadow: var(--form-container-shadow);
+}
