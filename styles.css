@@ -17,7 +17,7 @@
     --form-container-height: 418px;
     --form-container-shadow: 0px 0px 10px #157e7e;
     --form-container-background: #101018;
-    --form-header: 40px;
+    --form-header-text-size: 40px;
     --form-label-text-size: 22px;
     --form-input-width: 278px;
     --form-input-height: 36px;
@@ -107,4 +107,56 @@ body {
     height: var(--form-container-height);
     margin-top: var(--between-description-form-container);
     box-shadow: var(--form-container-shadow);
+}
+
+.form-container h3 {
+    font-size: var(--form-header-text-size);
+    padding-top: 10px;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    margin: 0;
+}
+
+.sub-container {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    height: 85%;
+}
+
+.sub-container > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sub-container label {
+    font-size: var(--form-label-text-size);
+    margin-bottom: -32px;
+}
+
+.sub-container input {
+    color: white;
+    font-size: 1.5rem;
+    padding: 5px;
+    border: none;
+    background: var(--form-input-background);
+    width: var(--form-input-width);
+    height: var(--form-input-height);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.sub-container input:focus {
+    outline: 1px solid rgb(0, 225, 255);
+}
+
+#password,
+#confirm-password {
+    font-size: 1rem;
 }
