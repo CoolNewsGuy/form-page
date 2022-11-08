@@ -32,6 +32,7 @@
     /* distances */
     --between-logo-container-top: 117px;
     --between-description-form-container: 120px;
+    --between-description-top: 70px;
     --between-button-form-container: 48px;
     --between-circle-logo-text: 10px;
 }
@@ -91,4 +92,12 @@ body {
 
 .logo img {
     margin-top: 0.6em;
+}
+
+/* +form */
+.description {
+    font-size: var(--description-text-size);
+    margin: auto;
+    width: 92%;
+    margin-top: var(--between-description-top);
 }
