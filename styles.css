@@ -2,12 +2,13 @@
 
 :root {
     /* image side */
+    --logo-container-height: 123px;
     --logo-container-background: rgba(0, 0, 0, 0.4);
-    --logo-text-size: 100px;
-    --logo-inner-shadow: 0 4px 4px 0 #000 inset;
     --background-width: 712px;
     --circle-border: 7px solid #676767;
     --circle-letter-size: 70px;
+    --circle-height: 100px;
+    --circle-width: 100px;
 
     /* form side */
     --form-side-width: calc(100% - var(--background-width));
@@ -31,6 +32,7 @@
     --between-logo-container-top: 117px;
     --between-description-form-container: 120px;
     --between-button-form-container: 48px;
+    --between-circle-logo-text: 10px;
 }
 
 * {
@@ -45,18 +47,47 @@ body {
 
 body {
     display: flex;
+    color: #fff;
 }
 
 .image {
     background: url(background.jpg);
     background-position: center;
     background-size: cover;
-    width: 25%;
-    height: 100%;
+    width: var(--background-width);
 }
 
 .form {
     width: 75%;
     height: 100%;
     background: rgb(30, 25, 39);
+}
+
+.logo {
+    background: var(--logo-container-background);
+    width: var(--background-width);
+    height: var(--logo-container-height);
+    margin-top: var(--between-logo-container-top);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo .logo-circle {
+    width: var(--circle-width);
+    height: var(--circle-height);
+    margin-right: var(--between-circle-logo-text);
+    display: grid;
+    place-items: center;
+    padding-bottom: 10px;
+    border: var(--circle-border);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.logo img {
+    margin-top: 0.6em;
 }
