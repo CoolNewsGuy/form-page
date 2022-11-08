@@ -16,6 +16,7 @@
     --form-container-width: 1209px;
     --form-container-height: 418px;
     --form-container-shadow: 0px 0px 10px #157e7e;
+    --form-container-background: #101018;
     --form-header: 40px;
     --form-label-text-size: 22px;
     --form-input-width: 278px;
@@ -60,7 +61,7 @@ body {
 .form {
     width: 75%;
     height: 100%;
-    background: rgb(30, 25, 39);
+    background: #1e1a26;
 }
 
 .logo {
