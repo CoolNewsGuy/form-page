@@ -176,6 +176,10 @@ body {
 }
 
 /* +create button */
+.login-signup {
+    font-size: 30px;
+}
+
 button {
     background: var(--form-container-background);
     color: #fff;
@@ -196,9 +200,33 @@ button {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
     color: var(--form-input-background);
     background: #fff;
+}
+
+.login-text {
+    display: block;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.3em;
+}
+
+.login-button {
+    color: var(--login-text-color);
+    text-decoration: none;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    color: var(--login-text-color-hover);
 }
