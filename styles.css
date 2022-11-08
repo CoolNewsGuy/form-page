@@ -161,6 +161,10 @@ body {
     outline-color: red;
 }
 
+.sub-container input:optional {
+    outline-color: green;
+}
+
 .sub-container [data-required]::after {
     content: "*";
     color: #f00;
