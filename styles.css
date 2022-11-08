@@ -1,5 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
 
+:root {
+    /* image side */
+    --logo-container-background: rgba(0, 0, 0, 0.4);
+    --logo-text-size: 100px;
+    --logo-inner-shadow: 0 4px 4px 0 #000 inset;
+    --background-width: 712px;
+    --circle-border: 7px solid #676767;
+    --circle-letter-size: 70px;
+
+    /* form side */
+    --form-side-width: calc(100% - var(--background-width));
+    --description-text-size: 55px;
+    --form-container-width: 1209px;
+    --form-container-height: 418px;
+    --form-container-shadow: 0px 0px 10px #157e7e;
+    --form-header: 40px;
+    --form-label-text-size: 22px;
+    --form-input-width: 278px;
+    --form-input-height: 36px;
+    --form-input-background: #0b3434;
+    --create-account-button-width: 283px;
+    --create-account-button-height: 63px;
+    --create-account-text-padding: 13px 44px;
+    --create-account-login-text-size: 30px;
+    --login-text-color: #157e7e;
+    --login-text-color-hover: #0a4747;
+
+    /* distances */
+    --between-logo-container-top: 117px;
+    --between-description-form-container: 120px;
+    --between-button-form-container: 48px;
+}
+
 * {
     box-sizing: border-box;
     font-family: "New Rocker";
