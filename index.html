@@ -25,10 +25,10 @@
       and save the world
       with us!</h2>
 
-    <div class="form-container">
-      <h3>UNICLY is waiting for you!</h3>
+    <form id="form" action="" method="post" class="form-container">
 
-      <form action="" method="post" class="sub-container">
+      <h3>UNICLY is waiting for you!</h3>
+      <div class="sub-container">
         <div class="left-elements">
           <label for="first-name" data-required title="Required">
             FIRST NAME
@@ -62,8 +62,10 @@
           </label>
           <input type="password" id="confirm-password" name="confirm-password" required>
         </div>
-      </form>
-    </div>
+      </div>
+
+    </form>
+    <button type="submit" form="form">Create Account</button>
   </div>
 </body>
 
