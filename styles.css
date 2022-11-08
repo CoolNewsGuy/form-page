@@ -97,6 +97,7 @@ body {
 /* +form */
 .description {
     font-size: var(--description-text-size);
+    font-weight: 500;
     margin: auto;
     width: 92%;
     margin-top: var(--between-description-top);
@@ -154,6 +155,15 @@ body {
 
 .sub-container input:focus {
     outline: 1px solid rgb(0, 225, 255);
+}
+
+.sub-container input:invalid {
+    outline-color: red;
+}
+
+.sub-container [data-required]::after {
+    content: "*";
+    color: #f00;
 }
 
 #password,
