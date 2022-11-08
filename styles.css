@@ -52,10 +52,12 @@ body {
     color: #fff;
 }
 
+/* +image side */
 .image {
     background: url(background.jpg);
     background-position: center;
     background-size: cover;
+    min-width: 500px;
     width: var(--background-width);
 }
 
@@ -67,7 +69,7 @@ body {
 
 .logo {
     background: var(--logo-container-background);
-    width: var(--background-width);
+    width: 100%;
     height: var(--logo-container-height);
     margin-top: var(--between-logo-container-top);
     display: flex;
