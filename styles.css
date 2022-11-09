@@ -4,7 +4,8 @@
     /* image side */
     --logo-container-height: 123px;
     --logo-container-background: rgba(0, 0, 0, 0.4);
-    --background-width: 712px;
+    --background-width: 30%;
+    --background-min-width: 500px;
     --circle-border: 7px solid #676767;
     --circle-letter-size: 70px;
     --circle-height: 100px;
@@ -12,10 +13,9 @@
 
     /* form side */
     --form-side-width: calc(100% - var(--background-width));
-    --description-text-size: 55px;
+    --description-text-size: 3.5vw;
     --form-container-width: 1209px;
     --form-container-height: 418px;
-    --form-container-shadow: 0px 0px 10px #157e7e;
     --form-container-background: #101018;
     --form-header-text-size: 40px;
     --form-label-text-size: 22px;
@@ -31,7 +31,7 @@
 
     /* distances */
     --between-logo-container-top: 117px;
-    --between-description-form-container: 120px;
+    --between-description-form-container: 60px;
     --between-description-top: 70px;
     --between-button-form-container: 48px;
     --between-circle-logo-text: 10px;
@@ -57,12 +57,12 @@ body {
     background: url(background.jpg);
     background-position: center;
     background-size: cover;
-    min-width: 500px;
+    min-width: var(--background-min-width);
     width: var(--background-width);
 }
 
 .form {
-    width: 75%;
+    width: var(--form-side-width);
     height: 100%;
     background: #1e1a26;
 }
@@ -100,8 +100,7 @@ body {
 .description {
     font-size: var(--description-text-size);
     font-weight: 500;
-    margin: auto;
-    width: 92%;
+    text-align: center;
     margin-top: var(--between-description-top);
 }
 
@@ -109,7 +108,6 @@ body {
     background: var(--form-container-background);
     height: var(--form-container-height);
     margin-top: var(--between-description-form-container);
-    box-shadow: var(--form-container-shadow);
 }
 
 .form-container h3 {
@@ -233,4 +231,40 @@ button:hover {
 
 .login-button:hover {
     color: var(--login-text-color-hover);
+}
+
+@media only screen and (max-height: 768px) {
+    .description {
+        margin-top: 2rem;
+    }
+
+    .form-container {
+        margin-top: revert;
+    }
+
+    button {
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    :root {
+        --background-width: 30%;
+        --background-min-width: unset;
+        --logo-container-height: 8vw;
+        --circle-width: 7vw;
+        --circle-height: 7vw;
+    }
+
+    .unicly-text {
+        width: 80%;
+    }
+
+    .u-letter {
+        width: 60%;
+    }
+
+    .sub-container {
+        gap: 10%;
+    }
 }
