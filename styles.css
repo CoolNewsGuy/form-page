@@ -1,6 +1,10 @@
+/* !make the page responsive for mobile */
+
 @import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
 
 :root {
+    --display: flex;
+
     /* image side */
     --logo-container-height: 123px;
     --logo-container-background: rgba(0, 0, 0, 0.4);
@@ -48,7 +52,7 @@ body {
 }
 
 body {
-    display: flex;
+    display: var(--display);
     color: #fff;
 }
 
@@ -70,7 +74,7 @@ body {
 .logo {
     background: var(--logo-container-background);
     width: 100%;
-    height: var(--logo-container-height);
+    min-height: var(--logo-container-height);
     margin-top: var(--between-logo-container-top);
     display: flex;
     justify-content: center;
@@ -247,7 +251,7 @@ button:hover {
     }
 }
 
-@media only screen and (max-width: 1366px) {
+@media only screen and (min-width: 943px) and (max-width: 1366px) {
     :root {
         --background-width: 30%;
         --background-min-width: unset;
@@ -266,5 +270,88 @@ button:hover {
 
     .sub-container {
         gap: 10%;
+    }
+}
+
+@media only screen and (min-width: 623px) and (max-width: 942px) {
+    :root {
+        --display: block;
+        --between-logo-container-top: 0;
+        --background-width: 100%;
+        --form-side-width: 100%;
+        --between-description-top: 0;
+        --description-text-size: 6vw;
+        --circle-width: 11%;
+        --circle-height: 11%;
+        --logo-container-height: 80px;
+    }
+
+    .form {
+        padding-top: 8vw;
+    }
+
+    .unicly-text {
+        width: 40%;
+    }
+
+    .u-letter {
+        width: 60%;
+    }
+
+    .sub-container {
+        gap: 50%;
+    }
+}
+
+@media only screen and (max-width: 622px) {
+    :root {
+        --display: block;
+        --between-logo-container-top: 0;
+        --background-width: 100%;
+        --form-side-width: 100%;
+        --between-description-top: 0;
+        --description-text-size: 6vw;
+        --circle-width: 11%;
+        --circle-height: 11%;
+        --logo-container-height: 80px;
+        --form-container-height: 650px;
+        --form-header-text-size: 6vw;
+    }
+
+    .form {
+        padding-top: 8vw;
+    }
+
+    .form h3 {
+        height: 13%;
+    }
+
+    .unicly-text {
+        width: 40%;
+    }
+
+    .u-letter {
+        width: 60%;
+    }
+
+    .sub-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .sub-container > * {
+        align-items: center;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .sub-container input {
+        margin-top: 10px;
+    }
+
+    .sub-container > div > * {
+        display: block;
+        width: 70%;
     }
 }
