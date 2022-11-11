@@ -17,7 +17,7 @@
 
     /* form side */
     --form-side-width: calc(100% - var(--background-width));
-    --description-text-size: 3.5vw;
+    --description-text-size: 3.5vmax;
     --form-container-width: 1209px;
     --form-container-height: 418px;
     --form-container-background: #101018;
@@ -237,9 +237,28 @@ button:hover {
     color: var(--login-text-color-hover);
 }
 
-@media only screen and (max-height: 768px) {
+@media only screen and (min-width: 634px) and (max-height: 770px) {
     .description {
-        margin-top: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-size: 4vh;
+    }
+
+    .form-container {
+        margin-top: revert;
+        height: 380px;
+    }
+
+    button {
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (min-height: 771px) and (max-height: 970px) {
+    .description {
+        margin-top: 1rem;
+        margin-bottom: 8vh;
+        font-size: 5vh;
     }
 
     .form-container {
@@ -253,7 +272,6 @@ button:hover {
 
 @media only screen and (min-width: 943px) and (max-width: 1366px) {
     :root {
-        --background-width: 30%;
         --background-min-width: unset;
         --logo-container-height: 8vw;
         --circle-width: 7vw;
@@ -273,7 +291,7 @@ button:hover {
     }
 }
 
-@media only screen and (min-width: 623px) and (max-width: 942px) {
+@media only screen and (min-width: 635px) and (max-width: 942px) {
     :root {
         --display: block;
         --between-logo-container-top: 0;
@@ -284,6 +302,10 @@ button:hover {
         --circle-width: 11%;
         --circle-height: 11%;
         --logo-container-height: 80px;
+    }
+
+    .description {
+        margin-top: -4vh;
     }
 
     .form {
@@ -299,11 +321,11 @@ button:hover {
     }
 
     .sub-container {
-        gap: 50%;
+        gap: 10vw;
     }
 }
 
-@media only screen and (max-width: 622px) {
+@media only screen and (max-width: 634px) {
     :root {
         --display: block;
         --between-logo-container-top: 0;
@@ -353,5 +375,38 @@ button:hover {
     .sub-container > div > * {
         display: block;
         width: 70%;
+    }
+}
+
+@media only screen and (max-width: 633px) {
+    body {
+        min-height: 140vh;
+    }
+
+    .image {
+        min-width: 200px;
+        width: 100%;
+    }
+
+    .description {
+        font-size: 8vw;
+    }
+
+    .logo {
+        min-height: 50px;
+    }
+
+    .login-text {
+        font-size: 6vw;
+    }
+
+    .form-container {
+        margin-top: 0;
+        padding-top: 10px;
+        min-height: 700px;
+    }
+
+    .form-container h3 {
+        font-size: 7vw;
     }
 }
